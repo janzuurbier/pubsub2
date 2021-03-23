@@ -14,7 +14,7 @@ private:
 	
 	
 public:
-	publisher(string topic, string ipadr = "77.172.149.184", int port = 8402) { 
+	publisher(string topic, string ipadr = "51.144.253.112", int port = 8402) { 
 		try{
 			SocketAddress foreignaddr(ipadr.data(), port, SocketAddress::TCP_SOCKET);
 			sock.connect(foreignaddr);
@@ -70,7 +70,7 @@ private:
 	}
 	
 public:
-	subscription(string s, void (*f)(string), string ipadr = "77.172.149.184", int port = 8402):
+	subscription(string s, void (*f)(string), string ipadr = "51.144.253.112", int port = 8402):
 	topic (s),  call_back(f), 
 	remote_addr(ipadr.data(), port, SocketAddress::TCP_SOCKET) {
 		try{
