@@ -30,7 +30,10 @@ public:
 	
 		try{
 			int len = message.size();
-			if(len > 99) len = 99;
+			if(len > 99) {
+				len = 99;
+				message = message.substr(0, len);
+			}
 			char ch1 = len / 10 + 48;
 			char ch2 = len % 10 + 48;
 			char buffer[2] = {ch1, ch2};
