@@ -26,6 +26,10 @@ public:
 		}
 	}
 	
+	~publisher(){
+		sock.close();
+	}
+	
 	void send(string message){
 	
 		try{
