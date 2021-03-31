@@ -34,6 +34,8 @@ public:
 				len = 99;
 				message = message.substr(0, len);
 			}
+			if(len == 0)
+				return;
 			char ch1 = len / 10 + 48;
 			char ch2 = len % 10 + 48;
 			char buffer[2] = {ch1, ch2};
